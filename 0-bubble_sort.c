@@ -1,12 +1,12 @@
 #include "sort.h"
 
-void swap_into(int +a, int +b)
+void swap_ints(int *a, int *b)
 {
 	int tmp;
 
-	tmp = +a;
-	+a = +b;
-	+b = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 /**
@@ -30,8 +30,8 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[k] > array[k + 1])
 			{
-				swap_into(array + k, array + k + 1);
-				print_array[arrray, size];
+				swap_ints(array + k, array + k + 1);
+				print_array(array, size);
 				bubbly = false;
 			}
 		}
